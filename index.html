@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Lookup Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-div">
+      <form id="form">
+        <fieldset>
+          <legend>Find Information About A Movie</legend>
+          <p id="API_key_p">
+            <label for="API_key">Please Enter Your API Key </label>
+            <input type="text" name="API_key" id="API_key" />
+            <small id="api_small"></small>
+          </p>
+          <p>
+            <label for="search-method">Search By: (Required) </label>
+            <input
+              type="radio"
+              name="search-method"
+              id="name"
+              value="name"
+              required
+            />
+            <label for="name">Name</label>
+            <input
+              type="radio"
+              name="search-method"
+              id="imdb_id"
+              value="imdb_id"
+              required
+            />
+            <label for="imdb_id">IMDB ID</label>
+          </p>
+          <p>
+            <label for="search-input" id="search-input-label"
+              >Enter the Information:
+            </label>
+            <input type="text" name="search-input" id="search-input" required />
+            <small id="input-small"></small>
+          </p>
+          <p>
+            <label for="year">Year (Optional)</label>
+            <input type="number" id="year" min="1928" max="2022" />
+          </p>
+          <p>
+            <label for="plot">Plot (Required)</label>
+            <select name="plot" id="plot">
+              <option value="short">Short</option>
+              <option value="full">Full</option>
+            </select>
+          </p>
+          <input type="submit" />
+        </fieldset>
+      </form>
+    </div>
+    <br />
+    <div id="results"></div>
+    <div id="favorites"></div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
